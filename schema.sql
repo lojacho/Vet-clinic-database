@@ -5,6 +5,7 @@ CREATE DATABASE vet_clinic;
 
 CREATE TABLE animals (
   id              INT GENERATED ALWAYS AS IDENTITY,
+  pet_name        VARCHAR(15),
   date_of_birth   DATE,
   escape_attempts INT,
   neutered        BOOLEAN,
