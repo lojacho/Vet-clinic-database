@@ -25,3 +25,12 @@ CREATE TABLE species (
   id SERIAL PRIMARY KEY,
   name TEXT
 );
+
+ALTER TABLE animals DROP COLUMN species;
+
+-- Add the 'species_id' column as a foreign key referencing the 'species' table
+ALTER TABLE animals ADD COLUMN species_id INTEGER REFERENCES species(id);
+
+-- Add the 'owner_id' column as a foreign key referencing the 'owners' table
+ALTER TABLE animals ADD COLUMN owner_id INTEGER REFERENCES owners(id);
+
